@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Image image;
     public ItemData data;
     public GameManager gameManager;
 
@@ -15,8 +15,10 @@ public class Item : MonoBehaviour
 
     public void Initialize(ItemData itemData)
     {
+        Debug.Log("Instantilizing");
         data = itemData;
-        spriteRenderer.sprite = data.itemSprite;
+        image.sprite = data.itemSprite;
 
     }
+
 }

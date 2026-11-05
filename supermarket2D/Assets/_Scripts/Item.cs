@@ -1,4 +1,6 @@
+using UnityEditor.Search;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Item : MonoBehaviour
@@ -6,11 +8,18 @@ public class Item : MonoBehaviour
     [SerializeField] private Image image;
     public ItemData data;
     public GameManager gameManager;
+    public Image descriptionContainer;
 
-    private void OnMouseDown()
+    public void ShowDesciption()
     {
-        Debug.Log("Item Selected");
-        gameManager.SelectItem(this);
+        Debug.Log(this);
+        Debug.Log(gameManager);
+        gameManager.ShowDescription(this);
+    }
+
+    public void HideDesciption()
+    {
+        gameManager.HideDescription(this);
     }
 
     public void Initialize(ItemData itemData)

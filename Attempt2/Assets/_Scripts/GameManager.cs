@@ -16,12 +16,12 @@ public class GameManager : MonoBehaviour
         if (Keyboard.current != null && Keyboard.current.digit1Key.wasPressedThisFrame)
         {
             Debug.Log("(Scroll) GameManager works");
-            inventory.AddCollectedItem(scrollData);
+            inventory.AddCollectedItem(scrollData, 1);
         }
         if (Keyboard.current != null && Keyboard.current.digit2Key.wasPressedThisFrame)
         {
             Debug.Log("(Chest) GameManager works");
-            inventory.AddCollectedItem(chestData);
+            inventory.AddCollectedItem(chestData, 1);
         }
     }
 }

@@ -25,17 +25,19 @@ public class InventorySlot : MonoBehaviour
         
     }
 
-    public void AddNewItem(ItemData itemToAdd)
+    public void AddNewItem(ItemData itemToAdd, int quantity)
     {
         Debug.Log("Collected!");
-        //Item item = Instantiate(itemPrefab, transform);
-        item.slot = this;
-        item.Initialize(itemToAdd);
+        Item newItem = Instantiate(itemPrefab, transform);
+        newItem.slot = this;
+        newItem.Initialize(itemToAdd, this);
+        item = newItem;
+        newItem.quantity = quantity;
     }
 
     public bool IsEmpty()
     {
-        return (item.data is null);
+        return (item is null);
     }
 
     public void SlotClicked()

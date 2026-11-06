@@ -35,50 +35,36 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void AddCollectedItem(ItemData itemToAdd)
+    public void AddCollectedItem(ItemData itemToAdd, int quantity)
     {
         for (int i = 0; i < allItemSlots.Count; i++)
         {
-            if (i <= allItemSlots.Count - 1)
+            InventorySlot slot = allItemSlots[i];
+            if (!slot.IsEmpty())
             {
-                Debug.Log($"If not at end... (i = {i})");
-                InventorySlot slot = allItemSlots[i];
-                Debug.Log($"slot = {allItemSlots[i]}");
-                if (!slot.IsEmpty())
+                if ((slot.item.data.itemName == itemToAdd.itemName) && (slot.item.quantity <= slot.item.data.stackSize))
                 {
-                    Debug.Log("Slot not empty");
-                    Debug.Log(slot.item.data.itemName);
-                    if ((slot.item.data.itemName == itemToAdd.itemName) && (slot.item.data.itemQuantity <= slot.item.data.stackSize))
+                    if ((quantity + slot.item.quantity) <= slot.item.data.stackSize)
                     {
-                        // if the item exists and is not at capacity
-                        Debug.Log($"If the item exists and is not at capacity... (i = {i})");
-                        if ((itemToAdd.itemQuantity + slot.item.data.itemQuantity) <= slot.item.data.stackSize)
-                        {
-                            slot.item.data.itemQuantity += itemToAdd.itemQuantity;
-                            Debug.Log($"Item added to existing stack (i = {i})");
-                            return;
-                        }
-                        if ((itemToAdd.itemQuantity + slot.item.data.itemQuantity) > slot.item.data.stackSize)
-                        {
-                            Debug.Log($"If over capacity add what it can... (i = {i})");
-                            int space = slot.item.data.stackSize - slot.item.data.itemQuantity;
-                            slot.item.data.itemQuantity += space;
-                            itemToAdd.itemQuantity -= space;
-                            // overflow should be handled 
-                        }
+                        slot.item.quantity += quantity;
+                        slot.item.UpdateQuantity();
+                        return;
+                    }
+                    if ((quantity + slot.item.quantity) > slot.item.data.stackSize)
+                    {
+                        int space = slot.item.data.stackSize - slot.item.quantity;
+                        slot.item.quantity += space;
+                        slot.item.UpdateQuantity();
+                        quantity -= space;
                     }
                 }
-                Debug.Log($"Check if empty... (i = {i})");
-                if (slot.IsEmpty())
-                {
-                    Debug.Log($"If empty add item to new slot (i = {i})");
-                    slot.AddNewItem(itemToAdd); // handle item overflow
-                    return;
-                }
-                //i += 1;
-                Debug.Log($"Starting next iteration... (i = {i})");
             }
-            Debug.Log("Inventory Full");
+            if (slot.IsEmpty())
+            {
+                slot.AddNewItem(itemToAdd, quantity);
+                return;
+            }
+        Debug.Log("Inventory Full");
         }
     }
 

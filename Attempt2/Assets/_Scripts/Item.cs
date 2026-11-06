@@ -10,6 +10,7 @@ public class Item : MonoBehaviour
     public ItemData data;
     public InventorySlot slot;
     public TextMeshProUGUI quantityText;
+    public int quantity;
 
     public void Start()
     {
@@ -26,13 +27,19 @@ public class Item : MonoBehaviour
         //inventory.HideDescription(this);
     }
 
-    public void Initialize(ItemData itemData)
+    public void Initialize(ItemData itemData, InventorySlot parent)
     {
         data = itemData;
         image.sprite = data.itemSprite;
-        if (data.itemQuantity > 1)
+        slot = parent;
+        UpdateQuantity();
+    }
+
+    public void UpdateQuantity()
+    {
+        if (quantity > 1)
         {
-            quantityText.text = data.itemQuantity.ToString();
+            quantityText.text = quantity.ToString();
         }
         else
         {

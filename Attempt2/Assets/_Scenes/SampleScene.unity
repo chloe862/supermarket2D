@@ -128,6 +128,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 878365445}
@@ -216,7 +220,8 @@ PrefabInstance:
       value: InventorySlot (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -1066,6 +1071,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 878365445}
@@ -1154,7 +1163,8 @@ PrefabInstance:
       value: InventorySlot (7)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -1309,6 +1319,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 878365445}
@@ -1397,7 +1411,8 @@ PrefabInstance:
       value: InventorySlot (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -1721,6 +1736,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 878365445}
@@ -1809,7 +1828,8 @@ PrefabInstance:
       value: InventorySlot (22)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -1837,6 +1857,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
@@ -1926,7 +1950,8 @@ PrefabInstance:
       value: InventorySlot (19)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -1954,6 +1979,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
@@ -2043,7 +2072,8 @@ PrefabInstance:
       value: InventorySlot (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -2060,6 +2090,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
@@ -2149,7 +2183,8 @@ PrefabInstance:
       value: InventorySlot (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -2327,6 +2362,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 878365445}
@@ -2415,7 +2454,8 @@ PrefabInstance:
       value: InventorySlot (13)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -2513,6 +2553,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 878365445}
@@ -2601,7 +2645,8 @@ PrefabInstance:
       value: InventorySlot (11)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -2629,6 +2674,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
@@ -2718,7 +2767,8 @@ PrefabInstance:
       value: InventorySlot (15)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -2746,6 +2796,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
@@ -2835,7 +2889,8 @@ PrefabInstance:
       value: InventorySlot (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -3093,6 +3148,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 878365445}
@@ -3181,7 +3240,8 @@ PrefabInstance:
       value: InventorySlot (23)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -3209,6 +3269,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
@@ -3298,7 +3362,8 @@ PrefabInstance:
       value: InventorySlot (14)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -3315,6 +3380,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
@@ -3404,7 +3473,8 @@ PrefabInstance:
       value: InventorySlot (12)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -3432,6 +3502,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
@@ -3521,7 +3595,8 @@ PrefabInstance:
       value: InventorySlot (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -3754,6 +3829,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 878365445}
@@ -3842,7 +3921,8 @@ PrefabInstance:
       value: InventorySlot (26)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -3870,6 +3950,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
@@ -3959,7 +4043,8 @@ PrefabInstance:
       value: InventorySlot (24)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -3987,6 +4072,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
@@ -4076,7 +4165,8 @@ PrefabInstance:
       value: InventorySlot (21)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -4104,6 +4194,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
@@ -4193,7 +4287,8 @@ PrefabInstance:
       value: InventorySlot (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -4364,6 +4459,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 878365445}
@@ -4452,7 +4551,8 @@ PrefabInstance:
       value: InventorySlot (20)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -4480,6 +4580,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
@@ -4569,7 +4673,8 @@ PrefabInstance:
       value: InventorySlot (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -4711,6 +4816,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 878365445}
@@ -4799,7 +4908,8 @@ PrefabInstance:
       value: InventorySlot (25)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -4959,6 +5069,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 878365445}
@@ -5047,7 +5161,8 @@ PrefabInstance:
       value: InventorySlot (17)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -5075,6 +5190,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
@@ -5164,7 +5283,8 @@ PrefabInstance:
       value: InventorySlot (18)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -5192,6 +5312,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
@@ -5281,7 +5405,8 @@ PrefabInstance:
       value: InventorySlot (16)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -5477,6 +5602,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 878365445}
@@ -5565,7 +5694,8 @@ PrefabInstance:
       value: InventorySlot (9)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
@@ -5714,6 +5844,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 102920780}
     m_Modifications:
     - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200423346694126555, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 878365445}
@@ -5806,7 +5940,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5676111866752366310, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d226271ee9e13b4ca5107afad22bafd, type: 3}

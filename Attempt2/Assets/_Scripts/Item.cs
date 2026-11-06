@@ -6,10 +6,15 @@ using TMPro;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] private Image image;
+    public Image image;
     public ItemData data;
     public InventorySlot slot;
     public TextMeshProUGUI quantityText;
+
+    public void Start()
+    {
+        //image = GetComponent<Image>();
+    }
 
     public void ShowDesciption()
     {
@@ -23,10 +28,16 @@ public class Item : MonoBehaviour
 
     public void Initialize(ItemData itemData)
     {
-        Debug.Log("Instantilizing");
         data = itemData;
         image.sprite = data.itemSprite;
-
+        if (data.itemQuantity > 1)
+        {
+            quantityText.text = data.itemQuantity.ToString();
+        }
+        else
+        {
+            quantityText.text = "";
+        }
     }
 
 }

@@ -8,6 +8,7 @@ public class InventorySlot : MonoBehaviour
     //public TextMeshPro quantityText;
     public Inventory inventory;
     public Item itemPrefab;
+    //public Button parent;
 
     //ItemData data; get itemdata from the item instead
 
@@ -27,14 +28,14 @@ public class InventorySlot : MonoBehaviour
     public void AddNewItem(ItemData itemToAdd)
     {
         Debug.Log("Collected!");
-        Item item = Instantiate(itemPrefab);
-        item.slot = this; // this should probably be the actualy slot not the script
+        //Item item = Instantiate(itemPrefab, transform);
+        item.slot = this;
         item.Initialize(itemToAdd);
     }
 
     public bool IsEmpty()
     {
-        return (item is null);
+        return (item.data is null);
     }
 
     public void SlotClicked()

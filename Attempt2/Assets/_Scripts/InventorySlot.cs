@@ -1,3 +1,4 @@
+using NUnit.Framework.Interfaces;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -5,34 +6,21 @@ using UnityEngine.UI;
 public class InventorySlot : MonoBehaviour
 {
     public Item item;
-    //public TextMeshPro quantityText;
     public Inventory inventory;
     public Item itemPrefab;
-    //public Button parent;
 
-    //ItemData data; get itemdata from the item instead
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void AddNewItem(ItemData itemToAdd, int quantity)
     {
-        Debug.Log("Collected!");
         Item newItem = Instantiate(itemPrefab, transform);
+        item = newItem;
+        Debug.Log(item);
+        //Debug.Log(item.data);
+        //Debug.Log(item.image.sprite);
         newItem.slot = this;
         newItem.Initialize(itemToAdd, this);
-        item = newItem;
         newItem.quantity = quantity;
+        newItem.UpdateQuantity();
     }
 
     public bool IsEmpty()
@@ -42,38 +30,83 @@ public class InventorySlot : MonoBehaviour
 
     public void SlotClicked()
     {
-        if (IsEmpty() && inventory.heldItem is not null)
+        //Debug.Log($"Clicked slot: {gameObject.name}");
+        //Debug.Log($"item == null ? {item == null}");
+        Debug.Log($"item = {item}");
+
+
+        if (IsEmpty() && !inventory.IsHoldingItem)
         {
-            // if  holding item and slot empty --> do nothing
+            // if not holding item and slot empty --> do nothing
+            //Debug.Log("Slot: empty    Held: null");
         }
-        if (IsEmpty() && inventory.heldItem is null)
+        if (IsEmpty() && inventory.IsHoldingItem)
         {
-            // if not holding item and slot empty --> place item
-            item = inventory.heldItem;
-            inventory.heldItem = null;
+            // if holding item and slot empty --> place item
+            //Debug.Log("Slot: empty    Held: not null");
+            Debug.Log($"Placing item: {inventory.heldItem.data.itemName}");
+            AddNewItem(inventory.heldItem.data, inventory.heldItem.quantity);
+            inventory.heldItem.gameObject.SetActive(false);
+            inventory.IsHoldingItem = false;
+            Debug.Log($"Is holding item: {inventory.IsHoldingItem}");
+            UpdateHeldItem();
         }
-        if (!IsEmpty() && inventory.heldItem is null)
+        if (!IsEmpty() && !inventory.IsHoldingItem)
         {
             // if not holding item and slot full --> pick up item
-            inventory.heldItem = item;
+            //Debug.Log("Slot: filled    Held: empty");
+            inventory.heldItem.data = item.data;
+            inventory.heldItem.image.sprite = item.image.sprite;
+            inventory.heldItem.quantity = item.quantity;
+            inventory.heldItem.UpdateQuantity();
+
+            inventory.IsHoldingItem = true;
+            Destroy(item.gameObject);
             item = null;
-        }
-        if (!IsEmpty() && inventory.heldItem is not null)
-        {
-            // if holding item and slot full --> swap or combine items
-            if (inventory.heldItem.data.itemName != item.data.itemName)
-            {
-                // if the items are not the same
-                Item temp = inventory.heldItem;
-                inventory.heldItem = item;
-                item = temp;
-                return;
-            }
-            // if the items are the same
-            int space = item.data.stackSize - item.data.itemQuantity;
-            item.data.itemQuantity += space;
-            inventory.heldItem.data.itemQuantity -= space;
 
         }
+        //if (!IsEmpty() && inventory.IsHoldingItem)
+        //{
+        //    // if holding item and slot full --> swap or combine items
+        //    //Debug.Log("Slot: filled    Held: not null");
+        //    if (inventory.heldItem.data.itemName != item.data.itemName)
+        //    {
+        //        // if the items are not the same
+        //        Item temp = inventory.heldItem;
+        //        item = temp;
+        //        inventory.IsHoldingItem = true;
+        //        UpdateHeldItem();
+        //        return;
+        //    }
+        //    // if the items are the same
+        //    int space = item.data.stackSize - item.quantity;
+        //    item.quantity += space;
+        //    inventory.heldItem.quantity -= space;
+
+        //}
+    }
+    public void UpdateHeldItem()
+    {
+        if (inventory.IsHoldingItem)
+        {
+            inventory.heldItem.data = item.data;
+            inventory.heldItem.image.sprite = item.data.itemSprite;
+            inventory.heldItem.quantity = item.quantity;
+            inventory.heldItem.UpdateQuantity();
+            inventory.heldItem.gameObject.SetActive(true);
+        }
+        else
+        {
+            //inventory.heldItem.gameObject.SetActive(false);
+        }
+    }
+
+    public void UpdateItem(Item sourceItem)
+    {
+        item.data = sourceItem.data;
+        item.image.sprite = sourceItem.image.sprite;
+        item.quantity = sourceItem.quantity;
+
+        item.UpdateQuantity();
     }
 }

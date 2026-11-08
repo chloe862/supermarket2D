@@ -23,5 +23,15 @@ public class GameManager : MonoBehaviour
             Debug.Log("(Chest) GameManager works");
             inventory.AddCollectedItem(chestData, 1);
         }
+        if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            ToggleInventory();
+        }
+    }
+
+    public void ToggleInventory()
+    {
+        //inventory.SetActive(!inventory.activeInHierarchy);
+        inventory.enabled = !inventory.enabled;
     }
 }

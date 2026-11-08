@@ -17,6 +17,7 @@ public class Inventory : MonoBehaviour
 
     [Header("HeldItem")]
     public Item heldItem;
+    public bool IsHoldingItem = false;
     
     [Header("UI")]
     public GameObject inventory;
@@ -29,34 +30,71 @@ public class Inventory : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-        if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+
+        if (inventory.activeInHierarchy is true && IsHoldingItem)
         {
-            ToggleInventory();
+            heldItem.transform.position = Input.mousePosition;
         }
+
     }
+
+
+
+    //public void AddCollectedItem(ItemData itemToAdd, int quantity)
+    //{
+    //    for (int i = 0; i < allItemSlots.Count; i++)
+    //    {
+    //        InventorySlot slot = allItemSlots[i];
+    //        if (!slot.IsEmpty())
+    //        {
+    //            if ((slot.item.data.itemName == itemToAdd.itemName) && (slot.item.quantity < slot.item.data.stackSize))
+    //            {
+    //                if ((quantity + slot.item.quantity) <= slot.item.data.stackSize)
+    //                {
+    //                    slot.item.quantity += quantity;
+    //                    slot.item.UpdateQuantity();
+    //                    return;
+    //                }
+    //                if ((quantity + slot.item.quantity) > slot.item.data.stackSize)
+    //                {
+    //                    int space = slot.item.data.stackSize - slot.item.quantity;
+    //                    slot.item.quantity += space;
+    //                    slot.item.UpdateQuantity();
+    //                    quantity -= space;
+    //                }
+    //            }
+    //        }
+    //        if (slot.IsEmpty())
+    //        {
+    //            slot.AddNewItem(itemToAdd, quantity);
+    //            return;
+    //        }
+    //    }
+    //    Debug.Log("Inventory Full");
+    //}
 
     public void AddCollectedItem(ItemData itemToAdd, int quantity)
     {
         for (int i = 0; i < allItemSlots.Count; i++)
         {
             InventorySlot slot = allItemSlots[i];
+
             if (!slot.IsEmpty())
             {
-                if ((slot.item.data.itemName == itemToAdd.itemName) && (slot.item.quantity <= slot.item.data.stackSize))
+                if (slot.item.data.itemName == itemToAdd.itemName &&
+                    slot.item.quantity < slot.item.data.stackSize)
                 {
-                    if ((quantity + slot.item.quantity) <= slot.item.data.stackSize)
+                    if (quantity + slot.item.quantity <= slot.item.data.stackSize)
                     {
                         slot.item.quantity += quantity;
                         slot.item.UpdateQuantity();
                         return;
                     }
-                    if ((quantity + slot.item.quantity) > slot.item.data.stackSize)
-                    {
-                        int space = slot.item.data.stackSize - slot.item.quantity;
-                        slot.item.quantity += space;
-                        slot.item.UpdateQuantity();
-                        quantity -= space;
-                    }
+                    int space = slot.item.data.stackSize - slot.item.quantity;
+
+                    slot.item.quantity += space;
+                    slot.item.UpdateQuantity();
+                    quantity -= space;
                 }
             }
             if (slot.IsEmpty())
@@ -64,14 +102,8 @@ public class Inventory : MonoBehaviour
                 slot.AddNewItem(itemToAdd, quantity);
                 return;
             }
-        Debug.Log("Inventory Full");
         }
-    }
-
-
-    public void ToggleInventory()
-    {
-        inventory.SetActive(!inventory.activeInHierarchy);
+        Debug.Log("Inventory Full");
     }
 
 

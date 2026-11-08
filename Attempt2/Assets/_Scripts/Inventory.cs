@@ -1,121 +1,92 @@
-using NUnit.Framework.Interfaces;
+using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using UnityEditor.IMGUI.Controls;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
+
 public class Inventory : MonoBehaviour
 {
-    [Header("Items")]
-    public List<Item> collectedItems = new List<Item>();
-    public List<InventorySlot> allItemSlots = new List<InventorySlot>();
-    private Item selectedItem;
+    public static Inventory Singleton;
+    public static InventoryItem carriedItem;
 
-    [Header("ItemData")]
+    [SerializeField] InventorySlot[] inventorySlots;
+    [SerializeField] Transform draggablesTransform;
+    [SerializeField] InventoryItem itemPrefab;
 
-    [Header("HeldItem")]
-    public Item heldItem;
-    public bool IsHoldingItem = false;
-    
-    [Header("UI")]
-    public GameObject inventory;
+    [Header("Item List")]
+    [SerializeField] Item[] items;
 
-    void Start()
+    [Header("Debug")]
+    [SerializeField] Button giveItemBtn;
+
+    private void Awake()
     {
-
+        Singleton = this;
+        giveItemBtn.onClick.AddListener(delegate{ SpawnInventoryItem(); });
     }
 
-    //Update is called once per frame
-    void Update()
+    public void SpawnInventoryItem(Item item = null)
     {
-
-        if (inventory.activeInHierarchy is true && IsHoldingItem)
+        Item _item = item;
+        if(_item == null)
         {
-            heldItem.transform.position = Input.mousePosition;
+            int random = Random.Range(0, items.Length);
+            _item = items[random];
         }
 
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            // CHeckif the slot is empty
+            if (inventorySlots[i].myItem == null)
+            {
+                Instantiate(itemPrefab, inventorySlots[i].transform).Initialize(_item, inventorySlots[i]);
+                break;
+            }
+        }
+    }
+    private void Update()
+    {
+        if (carriedItem == null) return;
+        carriedItem.transform.position = Input.mousePosition;
     }
 
-
-
-    //public void AddCollectedItem(ItemData itemToAdd, int quantity)
-    //{
-    //    for (int i = 0; i < allItemSlots.Count; i++)
-    //    {
-    //        InventorySlot slot = allItemSlots[i];
-    //        if (!slot.IsEmpty())
-    //        {
-    //            if ((slot.item.data.itemName == itemToAdd.itemName) && (slot.item.quantity < slot.item.data.stackSize))
-    //            {
-    //                if ((quantity + slot.item.quantity) <= slot.item.data.stackSize)
-    //                {
-    //                    slot.item.quantity += quantity;
-    //                    slot.item.UpdateQuantity();
-    //                    return;
-    //                }
-    //                if ((quantity + slot.item.quantity) > slot.item.data.stackSize)
-    //                {
-    //                    int space = slot.item.data.stackSize - slot.item.quantity;
-    //                    slot.item.quantity += space;
-    //                    slot.item.UpdateQuantity();
-    //                    quantity -= space;
-    //                }
-    //            }
-    //        }
-    //        if (slot.IsEmpty())
-    //        {
-    //            slot.AddNewItem(itemToAdd, quantity);
-    //            return;
-    //        }
-    //    }
-    //    Debug.Log("Inventory Full");
-    //}
-
-    public void AddCollectedItem(ItemData itemToAdd, int quantity)
+    public void SetCarriedItem(InventoryItem item)
     {
-        for (int i = 0; i < allItemSlots.Count; i++)
+        if(carriedItem != null)
         {
-            InventorySlot slot = allItemSlots[i];
+            if (item.activeSlot.myTag != SlotTag.None && item.activeSlot.myTag != carriedItem.myItem.itemTag) return;
+            item.activeSlot.SetItem(carriedItem);
+        }
 
-            if (!slot.IsEmpty())
-            {
-                if (slot.item.data.itemName == itemToAdd.itemName &&
-                    slot.item.quantity < slot.item.data.stackSize)
+        if (item.activeSlot.myTag != SlotTag.None)
+        { EquiptEquiptment(item.activeSlot.myTag, null); }
+
+        carriedItem = item;
+        carriedItem.canvasGroup.blocksRaycasts = false;
+        item.transform.SetParent(draggablesTransform);
+    }
+
+    public void EquiptEquiptment(SlotTag tag, InventoryItem item = null)
+    {
+        switch (tag)
+        {
+            case SlotTag.Head:
+                if(item == null)
                 {
-                    if (quantity + slot.item.quantity <= slot.item.data.stackSize)
-                    {
-                        slot.item.quantity += quantity;
-                        slot.item.UpdateQuantity();
-                        return;
-                    }
-                    int space = slot.item.data.stackSize - slot.item.quantity;
-
-                    slot.item.quantity += space;
-                    slot.item.UpdateQuantity();
-                    quantity -= space;
+                    // Destrog item.equiptmentPrefab on the player object;
+                    Debug.Log("Unequipted helmet on " + tag);
                 }
-            }
-            if (slot.IsEmpty())
-            {
-                slot.AddNewItem(itemToAdd, quantity);
-                return;
-            }
+                else
+                {
+                    // Instantiage item.equiptmentPrefab on the Player Object;
+                    Debug.Log("Equipped " + item.myItem.name + " on " + tag);
+                }
+                break;
+            case SlotTag.Chest:
+                break;
+            case SlotTag.Legs:
+                break;
+            case SlotTag.Feet:
+                break;
         }
-        Debug.Log("Inventory Full");
     }
-
-
-    public void ShowDescription(Item item)
-    {
-        //item.descriptionContainer.enabled = true;
-        // Update text
-    }
-
-    public void HideDescription(Item item)
-    {
-        //item.descriptionContainer.enabled = false;
-    }
-
 }

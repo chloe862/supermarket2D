@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f9376f53db2ff04089b2e8b87368974, type: 3}
+  m_Script: {fileID: 11500000, guid: c1e53a2973b43a94b8834e720c946b02, type: 3}
   m_Name: Chest
   m_EditorClassIdentifier: 
-  itemName: Chest
-  itemSprite: {fileID: 21300000, guid: adfa3808c7fb95243910f1113f4f37e3, type: 3}
-  itemQuantity: 1
-  stackSize: 3
-  itemType: 0
+  sprite: {fileID: 21300000, guid: adfa3808c7fb95243910f1113f4f37e3, type: 3}
+  itemTag: 0
+  equiptmentPrefab: {fileID: 0}

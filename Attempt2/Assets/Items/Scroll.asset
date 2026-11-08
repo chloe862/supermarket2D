@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f9376f53db2ff04089b2e8b87368974, type: 3}
+  m_Script: {fileID: 11500000, guid: c1e53a2973b43a94b8834e720c946b02, type: 3}
   m_Name: Scroll
   m_EditorClassIdentifier: 
-  itemName: Scroll
-  itemSprite: {fileID: 21300000, guid: 4b61cc49c2276e946818377d32f111a2, type: 3}
-  itemQuantity: 1
-  stackSize: 1
-  itemType: 0
+  sprite: {fileID: 21300000, guid: 4b61cc49c2276e946818377d32f111a2, type: 3}
+  itemTag: 0
+  equiptmentPrefab: {fileID: 0}
